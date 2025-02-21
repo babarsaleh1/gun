@@ -112,3 +112,4 @@ jobs:
         npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
         npm install
         npm publish --access=public
+  if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v.fix')
